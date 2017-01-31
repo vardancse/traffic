@@ -1,0 +1,151 @@
+PUT traffic_jan_2014
+PUT traffic_jan_2014/green/_mapping{
+	{
+	  "properties":{
+		 "Pickup_latitude": {
+		 	"type": "double"
+		 },
+		 "Pickup_longitude": {
+		 	"type": "double"
+		 },
+		 "Dropoff_latitude": {
+		 	"type": "double"
+		 },
+		 "Dropoff_longitude": {
+		 	"type": "double"
+		 },
+		 "Ehail_fee":{
+		 	"type": "double"	
+		 },
+		 "Payment_type":{
+		 	"type": "long"
+		 },
+		 "RateCodeID":{
+		 	"type": "long"
+		 },
+		 "elapsed_time":{
+		 	"type": "long"
+		 },
+		  "Passenger_count":{
+		 	"type": "long"
+		 },
+		  "VendorID":{
+		 	"type": "long"
+		 },
+		 "Tolls_amount":{
+		 	"type": "double"
+		 },
+		  "Fare_amount":{
+		 	"type": "double"
+		 },
+		 "Trip_distance":{
+		 	"type": "double"
+		 },
+		  "Total_amount":{
+		 	"type": "double"
+		 },
+		 "Tip_amount":{
+		 	"type": "double"
+		 },
+		 "MTA_tax":{
+		 	"type": "double"
+		 },
+		 "Extra":{
+		 	"type": "double"
+		 },
+		 "lpep_pickup_datetime":{
+		 	"type": "date"
+		 },
+		 "Lpep_dropoff_datetime":{
+		 	"type": "date"
+		 },
+		 "pickup_geohash":{
+		 	"type": "geopoint"
+		 },
+		 "dropoff_geohash":{
+		 	"type": "geopoint"
+		 },
+		 "Store_and_fwd_flag":{
+		 	  "type":"string"
+		 },
+		 "speed":{
+		 	"type":"double"
+		 }
+	  }
+	}	
+
+
+
+PUT rt-feed
+PUT rt-feed/_mapping/nyc-supply{
+	{
+	  "properties":{
+		"geohash":{
+			"type":"geo_point"
+		},
+		"latitude":{
+			"type":"double"
+		},
+		"longitude":{
+			"type":"double"
+		},
+		"requestTime":{
+			"type":"date"
+		},
+		"driverID":{
+			"type":"long"
+		}
+	  }
+	}
+PUT rt-feed/_mapping/nyc-demand{
+	{
+	  "properties":{
+		"geohash":{
+			"type":"geo_point"
+		},
+		"latitude":{
+			"type":"double"
+		},
+		"longitude":{
+			"type":"double"
+		},
+		"requestTime":{
+			"type":"date"
+		},
+		"userID":{
+			"type":"long"
+		}
+	  }
+	}
+
+PUT weather
+
+PUT weather/nyc/_mapping
+{
+	"properties": {
+	  "conds": {
+	    "type": "keyword"
+	  },
+	  "fog": {
+	    "type": "long"
+	  },
+	  "hum": {
+	    "type": "long"
+	  },
+	  "rain": {
+	    "type": "long"
+	  },
+	  "snow": {
+	    "type": "long"
+	  },
+	  "tempm": {
+	    "type": "double"
+	  },
+	  "tornado": {
+	    "type": "long"
+	  },
+	  "weather_time": {
+	    "type": "date"
+	  }
+	}
+     }
