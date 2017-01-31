@@ -16,7 +16,7 @@ timeDateSuffix = '_datetime'
 fieldnames = ('VendorID','lpep_pickup_datetime','Lpep_dropoff_datetime','Store_and_fwd_flag','RateCodeID','Pickup_longitude','Pickup_latitude','Dropoff_longitude','Dropoff_latitude','Passenger_count','Trip_distance','Fare_amount','Extra','MTA_tax','Tip_amount','Tolls_amount','Ehail_fee','Total_amount','Payment_type')
 
 es = Elasticsearch(["http://localhost:9200"], maxsize=25,timeout=100)
-ES_INDEX = 'traffic_may_2016'
+ES_INDEX = 'traffic_jan_2014'
 ES_TYPE = 'green'
 output = []
 actions =[]

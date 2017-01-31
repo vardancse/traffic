@@ -6,7 +6,7 @@ import sys, traceback
 es = Elasticsearch(["http://0.0.0.0:9200"], maxsize=25,timeout=100)
 #kafka = KafkaClient()
 KAFKA_TOPIC = "rt-demand"
-ES_INDEX = "feed"
+ES_INDEX = "rt-feed"
 ES_TYPE = "nyc-demand"
 bulk_counter = 10
 actions = []
