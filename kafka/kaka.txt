@@ -1,0 +1,14 @@
+cd /opt/zookeeper-3.4.9/
+./bin/zkServer.sh start conf/zoo.cfg
+
+cd /opt/kafka_2.11-0.9.0.0/
+./bin/kafka-server-start.sh config/server.properties &
+
+
+bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -partitions 1 --topic rt-demand
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -partitions 1 --topic rt-supply
+
+
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 —topic rt-demand --from-beginning
